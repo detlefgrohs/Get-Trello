@@ -21,3 +21,13 @@ New-TrelloChecklistItem 'HH Income Source' | Out-Null
 New-TrelloChecklistItem 'HH Income Date' | Out-Null
 
 #Get-TrelloCards
+
+if ($false) {
+    $cards = Get-TrelloCards
+    for($index = 0; $index -lt $cards.Count ; $index += 1) {
+        #$cards[$index].id
+        Remove-TrelloCard $cards[$index].id
+    } 
+
+
+}

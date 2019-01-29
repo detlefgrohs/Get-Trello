@@ -56,6 +56,7 @@
 
         "Public\New-TrelloCard.ps1",
         "Public\Get-TrelloCards.ps1",
+        "Public\Remove-TrelloCard.ps1",
 
         "Public\New-TrelloChecklist.ps1",
         "Public\New-TrelloChecklistItem.ps1",
@@ -90,6 +91,7 @@
 
         'New-TrelloCard',
         'Get-TrelloCards',
+        'Remove-TrelloCard',
 
         'New-TrelloChecklist',
         'New-TrelloChecklistItem',
