@@ -14,13 +14,14 @@ $list = Get-TrelloList 'Pending'
 
 
 
-$exceldata = Import-Excel "$PSScriptRoot/Trello.xlsx"
+$exceldata = Import-Excel "$PSScriptRoot/Trello.xlsx" -WorksheetName "Trello Tasks"
 
-
-
+# Row 2, Row 1 has the headers
+# Have to quote the column becuase of the space in the header...
+# Fill with a new GUID to test...
 $exceldata[0]."Trello ID" = [System.Guid]::NewGuid().ToString();
 
-
-
-$exceldata | Export-Excel "$PSScriptRoot/Trello1.xlsx"
+# Outputting to an existing file that has formatting to show the data is updated and the
+# formats are not lost...
+$exceldata | Export-Excel "$PSScriptRoot/Trello1.xlsx" -WorksheetName "Trello Tasks"
 
